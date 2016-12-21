@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      lang="en"
+      layout:decorate="~{layout/main}">
+<body>
+<div layout:fragment="content">
+  <div class="jumbotron">
+    <h1>Registration completed! Hello <span th:text="${account.username}"></span>!</h1>
+  </div>
+</div>
+</body>
+</html>

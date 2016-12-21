@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      lang="en"
+      layout:decorate="~{layout/main}">
+<body>
+<div layout:fragment="content">
+  <h1>Registration</h1>
+
+  <form class="form-horizontal" th:action="@{/register}" method="POST">
+    <fieldset>
+      <div id="legend">
+        <legend class="">Register</legend>
+      </div>
+      <div class="control-group">
+        <!-- Username -->
+        <label class="control-label" for="username">Username</label>
+        <div class="controls">
+          <input type="text" id="username" name="username" placeholder="" class="input-xlarge" required="required">
+          <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <!-- firstname -->
+        <label class="control-label" for="firstname">Firstname</label>
+        <div class="controls">
+          <input type="text" id="firstname" name="firstname" placeholder="" class="input-xlarge" required="required">
+          <p class="help-block"></p>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <!-- lastname -->
+        <label class="control-label" for="lastname">Lastname</label>
+        <div class="controls">
+          <input type="text" id="lastname" name="lastname" placeholder="" class="input-xlarge" required="required">
+          <p class="help-block"></p>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <!-- E-mail -->
+        <label class="control-label" for="email">E-mail</label>
+        <div class="controls">
+          <input type="email" id="email" name="email" placeholder="" class="input-xlarge" required="required">
+          <p class="help-block">Please provide your E-mail</p>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <!-- Password-->
+        <label class="control-label" for="password">Password</label>
+        <div class="controls">
+          <input type="password" id="password" name="password" placeholder="" class="input-xlarge" required="required">
+          <p class="help-block">Password should be at least 4 characters</p>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <!-- Password -->
+        <label class="control-label" for="password_confirm">Password (Confirm)</label>
+        <div class="controls">
+          <input type="password" id="password_confirm" name="passwordConfirmation" placeholder="" class="input-xlarge"
+                 required="required">
+          <p class="help-block">Please confirm password</p>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <!-- Button -->
+        <div class="controls">
+          <button class="btn btn-success">Register</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
+</body>
+</html>
